@@ -1,86 +1,332 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Yanwei (Eric) Feng</title>
 
   <style>
-    body {
-      font-family: Arial;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-      line-height: 1.6;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    h1 {
-      color: #222;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f7fb;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .button-group {
+      margin-top: 30px;
     }
 
     .button {
       display: inline-block;
-      padding: 12px 20px;
-      margin: 10px 10px 10px 0;
-      background-color: black;
+      padding: 14px 24px;
+      margin: 10px;
+      background-color: #111827;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
+      transition: 0.2s ease;
+      font-weight: bold;
     }
 
-    .project {
-      margin-top: 30px;
-      padding: 20px;
-      border: 1px solid #ddd;
+    .button:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 30px;
+      color: #111827;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-card h2 {
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .project-card p {
+      margin-bottom: 16px;
+      color: #475569;
+    }
+
+    .tech-stack {
+      margin-top: 16px;
+    }
+
+    .tech-stack span {
+      display: inline-block;
+      background-color: #e2e8f0;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    .project-links {
+      margin-top: 20px;
+    }
+
+    .project-links a {
+      margin-right: 12px;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .skills-section {
+      margin-top: 80px;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: white;
+      padding: 12px 18px;
       border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .footer {
+      margin-top: 80px;
+      text-align: center;
+      color: #64748b;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Yanwei (Eric) Feng</h1>
+  <div class="container">
 
-  <p>
-    USC M.S. Industrial & Systems Engineering<br>
-    AI Product • Financial AI • LLM Systems
-  </p>
+    <!-- HERO SECTION -->
+    <section class="hero">
 
-  <a class="button" href="https://github.com/Eric-Fung-Jinwai/Eric-Fung-Jinwai.github.io/blob/main/Yanwei_Feng_resume.pdf">Download Resume</a>
-  <a class="button" href="https://github.com/Eric-Fung-Jinwai/Eric-Fung-Jinwai.github.io/blob/main/Yanwei_Feng_CV.pdf">Download CV</a>
-  <a class="button" href="https://github.com/Eric-Fung-Jinwai">
-    GitHub
-  </a>
+      <h1>Yanwei (Eric) Feng</h1>
 
-  <div class="project">
-    <h2>Stock Analysis System</h2>
+      <p>
+        USC M.S. Industrial & Systems Engineering
+      </p>
+      <p>
+        UCSD B.S. Applied Mathematic
+      </p>
 
-    <p>
-      Citation-aware stock research assistant using:
-    </p>
+      <p>
+        AI Product • LLM Systems • RAG Pipelines
+      </p>
 
-    <ul>
-      <li>FastAPI</li>
-      <li>Streamlit</li>
-      <li>RAG with SEC filings</li>
-      <li>ChromaDB</li>
-      <li>GPT-4o synthesis</li>
-    </ul>
-  </div>
+      <div class="button-group">
 
-  <div class="project">
-    <h2>Financial Decision Assistant</h2>
+        <a class="button"
+          href="https://Eric-Fung-Jinwai.github.io/Yanwei_Feng_resume.pdf"
+          target="_blank">
+          Resume
+        </a>
 
-    <p>
-      LoRA fine-tuned Qwen financial assistant capable of:
-    </p>
+        <a class="button"
+          href="https://Eric-Fung-Jinwai.github.io/cv-yanwei-eric-feng.pdf"
+          target="_blank">
+          CV
+        </a>
 
-    <ul>
-      <li>Market interpretation</li>
-      <li>Risk analysis</li>
-      <li>Strategy reasoning</li>
-      <li>Scenario analysis</li>
-    </ul>
+        <a class="button"
+          href="https://github.com/Eric-Fung-Jinwai"
+          target="_blank">
+          GitHub
+        </a>
+
+        <a class="button"
+          href="https://www.linkedin.com/in/yanwei-feng-284295288"
+          target="_blank">
+          LinkedIn
+        </a>
+
+        <a class="button"
+          href="mailto:yanweife@usc.edu">
+          Email
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+
+          <h2>Citation-aware research assistant</h2>
+
+          <p>
+            Citation-aware equity research assistant that synthesizes
+            SEC filings, market data, technical indicators, and financial
+            news into grounded AI-generated stock reports.
+          </p>
+
+          <div class="tech-stack">
+            <span>FastAPI</span>
+            <span>Streamlit</span>
+            <span>RAG</span>
+            <span>ChromaDB</span>
+            <span>GPT-4o</span>
+            <span>SEC Filings</span>
+          </div>
+
+          <div class="project-links">
+
+            <a href="https://github.com/Eric-Fung-Jinwai/Citation-aware-research-assistant"
+              target="_blank">
+              GitHub Repo
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+
+          <h2>Financial Decision Assistant</h2>
+
+          <p>
+            LoRA fine-tuned Qwen financial assistant capable of
+            market interpretation, risk analysis, strategy reasoning,
+            and scenario analysis.
+          </p>
+
+          <div class="tech-stack">
+            <span>Qwen</span>
+            <span>LoRA</span>
+            <span>Transformers</span>
+            <span>PyTorch</span>
+            <span>Financial AI</span>
+          </div>
+
+          <div class="project-links">
+
+            <a href="https://github.com/Eric-Fung-Jinwai/Financial-Decision-QA-System"
+              target="_blank">
+              GitHub Repo
+            </a>
+
+            <a href="http://18.217.220.60/"
+              target="_blank">
+              Demo
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section">
+
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill">Python</div>
+        <div class="skill">FastAPI</div>
+        <div class="skill">Streamlit</div>
+        <div class="skill">PyTorch</div>
+        <div class="skill">Transformers</div>
+        <div class="skill">RAG</div>
+        <div class="skill">ChromaDB</div>
+        <div class="skill">LLM Fine-Tuning</div>
+        <div class="skill">Vector Databases</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Financial AI</div>
+        <div class="skill">Prompt Engineering</div>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+
+      <p>
+        Built and maintained by Yanwei (Eric) Feng
+      </p>
+
+    </section>
+
   </div>
 
 </body>
+
 </html>
+```
